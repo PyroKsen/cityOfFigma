@@ -9,23 +9,29 @@ body {
   font-family: sans-serif;
 }
 
+.main-container {
+  margin-top: 64px;
+  width: calc(100% - 240px);
+  background: #f1f4f9;
+  padding-right: 120px;
+}
+
 .header {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
   position: fixed;
-  /* width: 100%; */
-  width: calc(100% - 240px);
-  margin-left: 240px;
+  width: 100%;
   height: 64px;
   background: #fff;
-  box-shadow: 0px 4px 5px 0px #e9edf3;
+  box-shadow: 0px 0px 5px 0px #E9EDF3;
   padding: 14px 114px 16px 0;
   box-sizing: border-box;
 }
+
 .header__date {
-  margin-right: 86px;
+  margin-right: 96px;
 }
 
 .header__analytics {
@@ -40,7 +46,7 @@ body {
 }
 
 .header__profile-search {
-  margin: 0 56px 0 190px;
+  margin: 0 56px 0 154px;
 }
 
 .header__name-container {
@@ -161,6 +167,7 @@ body {
   display: flex;
   flex-direction: column;
   padding: 20px 0;
+  z-index: 1;
 }
 
 .sidebar__logo {
@@ -205,7 +212,7 @@ body {
 .sidebar__text {
   margin: 0;
   color: rgba(255, 255, 255, 0.6);
-  font-family: SF Pro Display, sans-serif;
+  font-family: sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -254,12 +261,7 @@ body {
   width: 100%;
 }
 
-.main-container {
-  margin-top: 64px;
-  width: calc(100% - 240px);
-  background: #f1f4f9;
-  padding-right: 120px;
-}
+
 
 .utilities {
   margin-top: 20px;
@@ -275,7 +277,7 @@ body {
 .utilities__balance {
   display: flex;
   height: 40px;
-  padding: 8px 12px;
+  padding: 2px 12px;
   justify-content: center;
   align-items: center;
   gap: 10px;
@@ -403,7 +405,7 @@ body {
   background: #fff;
   box-shadow: 0px 4px 5px 0px #e9edf3;
   display: inline-flex;
-  padding: 24px 40px 57px;
+  padding: 24px 40px 54px;
   flex-direction: column;
   align-items: center;
 }
@@ -422,7 +424,7 @@ body {
 }
 
 .table__header-employee {
-  width: 96px;
+  width: 97px;
   display: flex;
   align-items: center;
   margin-left: 48px;
@@ -442,7 +444,7 @@ body {
 }
 
 .table__header-duration {
-  margin-left: 414px;
+  margin-left: 410px;
 }
 
 
@@ -456,7 +458,11 @@ body {
 }
 
 .table__row {
+  height: 54px;
+  border-bottom: 1px solid #eaf0fa;
   display: flex;
+  flex-direction: row;
+  align-items: center;
   width: 100%;
 }
 
@@ -475,6 +481,40 @@ body {
   height: 8px;
 }
 
+
+
+.table__row-time {
+  margin: 0;
+  width: 42px;
+  padding-left: 30px;
+}
+
+.table__row-call {
+  margin: 0;
+  width: 245px;
+  padding-left: 32px;
+}
+
+.table__row-source {
+  margin-left: 80px;
+  width: 162px;
+}
+
+.table__row-grade {
+  width: 172px;
+  padding-left: 53px;
+}
+
+.table__row-duration {
+  padding-left: 335px;
+}
+
+.table__row-type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .table__row-grade--success {
   color: #00A775;
   font-family: sans-serif;
@@ -491,39 +531,7 @@ body {
   background: #DBF8EF;
 }
 
-.table__row-time {
-  margin: 0;
-  width: 38px;
-  padding-left: 30px;
-}
-
-.table__row-call {
-  margin: 0;
-  width: 246px;
-  padding-left: 32px;
-}
-
-.table__row-source {
-  margin-left: 80px;
-  width: 61px;
-}
-
-.table__row-grade {
-  width: 172px;
-  padding-left: 153px;
-}
-
-.table__row-duration {
-  padding-left: 340px;
-}
-
-.table__row-type {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.table__row-grade-poznanie {
+.table__row-grade--poznanie {
   color: #005FF8;
   text-align: center;
   font-family: sans-serif;
@@ -541,7 +549,13 @@ body {
   background: #FFF;
 }
 
-.table__row-grade-good {
+.table__row-grade--good {
+  color: #122945;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 14px */
   display: flex;
   padding: 6px 8px;
   align-items: flex-start;
@@ -551,7 +565,7 @@ body {
   background: #D8E4FB;
 }
 
-.table__row-grade-bad {
+.table__row-grade--bad {
   display: flex;
   padding: 6px 8px;
   align-items: flex-start;
@@ -567,7 +581,7 @@ body {
   line-height: 100%; /* 14px */
 }
 
-.table__row-grade-script {
+.table__row-grade--script {
   color: #EA1A4F;
   font-family: sans-serif;
   font-size: 14px;
